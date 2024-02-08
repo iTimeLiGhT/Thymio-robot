@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>PlaneThymio</title>
+        <link rel="icon" type="image/x-icon" href="PlaneThymio_Photos/ico.png" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap&subset=hebrew" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;400i;700i&display=swap&subset=hebrew" rel="stylesheet">
+        <link href="PlaneThymio.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img class="img-fluid" src="PlaneThymio_Photos/Logo.png" width="320"></a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    תפריט
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#intro">בואו נתחיל</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#errors">פתרון שגיאות</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#termsBlock">בלוק תנאי</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#actionBlock">בלוק פעולה</a></li>
+                    </ul>
+                </div>
+                <a class="navbar-brand" href="#page-top"><img class="img-fluid" src="PlaneThymio_Photos/Beta.png" width="100"></a>
+            </div>
+        </nav>
+        <header class="masthead bg-white text-secondary text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <h1 class="masthead-heading mb-0">PlaneThymio</h1>
+                <div class="divider-custom divider-secondary">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p class="masthead-subheading font-weight-light mb-0">רגע לפני שיוצאים לנסיעת מבחן, בואו נלמד איך לתפעל את רובוט המשימה שלכם</p>
+            </div>
+        </header>
+        <section class="page-section bg-primary text-white mb-0" id="intro">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-white">הכירו את ממשק הרובוט</h2>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-cog"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 ms-auto text-center"><p class="lead"><b>
+                        בלוק כתום מסמן תנאי או אירוע, לדוגמה זיהוי עצם שנמצא מול הרובוט בעזרת חיישן.
+                        בלוק כחול מסמן פעולה, לדוגמה תזוזה אחורה.     
+                    <br><img class="img-fluid" src="PlaneThymio_Photos/01.png" alt="..." />                       
+                    </b></p></div>
+                    <div class="col-lg-5 me-auto text-center"><p class="lead"><b>
+                        ניתן לשלב שני תנאים יחד, לדוגמה אם (תנאי ראשון) לחצתי על לחצן שמאלה וגם (תנאי שני) תאורת 
+                        הרובוט התחתונה דלוקה בצע ורוד אז (פעולה) הרובוט יזוז שמאלה:
+                    <br><img class="img-fluid" src="PlaneThymio_Photos/02.png" alt="..." />   
+                        כמו כן, ניתן לתת לרובוט כמה פעולות (בלוק כחול) לבצע במקביל.
+                    </b></p><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto text-center"><p class="lead">
+                    <p class="lead fw-bold">שלב ראשון</p> 
+                    <p class="lead fw-bold">נוסיף תנאי "הפעלה בלחיצה על כפתור" לשורת הקוד הראשונה:</p> 
+                    <img class="img-fluid" src="PlaneThymio_Photos/Step1.png">                       
+                    </div>
+                    <div class="col-lg-4 me-auto text-center"><p class="lead">
+                    <p class="lead fw-bold">שלב שני</p> 
+                    <p class="lead fw-bold">נטען את הקוד במלואו לרובוט לפני ניתוקו והעברתו למסלול:</p>
+                    <img class="img-fluid" src="PlaneThymio_Photos/Step2.png">
+                    </div>
+                    <div class="col-lg-4 ms-auto text-center"><p class="lead">
+                    <p class="lead fw-bold">שלב שלישי</p> 
+                    <p class="lead fw-bold">ננתק את הרובוט מעמדת המחשב ונעבירו לתחילת המסלול:</p> 
+                    <img class="img-fluid" src="PlaneThymio_Photos/Step3.png">                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section bg-danger text-white mb-0" id="errors">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-white">שגיאות נפוצות בתכנות</h2>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 ms-auto text-center"><p class="lead"><b>
+                    <img class="img-fluid" src="PlaneThymio_Photos/ErrorHeader.png"/><br><br> 
+                    סימן השגיאה יכול להיגרם מאחד משני המקרים הבאים:<br> 
+                    קיימת שורת קוד המכילה אירוע או תנאי (בלוק כתום) אך לא מכילה פעולה (בלוק כחול), או שקיימות שתי שורות קוד עם אירוע או תנאי (בלוק כתום) זהות לחלוטין.
+                    <img class="img-fluid" src="PlaneThymio_Photos/ErrorSign.png" alt="..." />                       
+                    </b></p></div>
+                    <div class="col-lg-5 me-auto text-center"><p class="lead"><b>
+                    <img class="img-fluid" src="PlaneThymio_Photos/WarningHeader.png"/><br><br> 
+                    סימן האזהרה יופיע כאשר קיימת שורת קוד שניתן לבצע אך שאינה הגיונית באופן מוחלט.
+                    לדוגמה: לא בחרנו איזה חיישן להפעיל על מנת שהרובוט יוכל לזהות מכשול.                    
+                    <br><img class="img-fluid" src="PlaneThymio_Photos/warningSign.png" alt="..." />   
+                    </b></p></div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section termsBlock" id="termsBlock">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-secondary mb-0">בלוק תנאי</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fa fa-question"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="container d-flex align-items-center flex-column">
+                <img class="img-fluid" src="PlaneThymio_Photos/if_event.png" height="500" width="500"> 
+                <p class="bg-white text-secondary text-center h5">בלוק האירוע הוא שלב התנאי (אם) בפקודה שאנחנו נותנים לרובוט</p>
+                <p class="bg-white text-secondary text-center h5 mb-5">לחצו על בלוק על מנת ללמוד עליו <i class="fa fa-mouse-pointer" aria-hidden="true"></i></p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Start_of_the_program">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Start_of_the_program.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Single_button">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Single_button.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#On_the_side">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/On_the_side.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#On_the_back">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/On_the_back.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Roll_angle">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Roll_angle.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Impact_detection">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Impact_detection.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Clap_detection">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Clap_detection.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Ground_detection">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Ground_detection.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Ground_sensors">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Ground_sensors.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Proximity_sensors">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Proximity_sensors.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Top_color_state">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Top_color_state.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Bottom_color_state">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Bottom_color_state.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Led_state_check">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Led_state_check.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Timer_elapsed">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Timer_elapsed.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section bg-secondary" id="Separator">
+        <div class="container">
+        <img class="img-fluid" src="PlaneThymio_Photos/Image_separator.png">
+        </div>
+        </section>
+        <section class="page-section actionBlock" id="actionBlock">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-secondary mb-0">בלוק פעולה</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fa fa-refresh"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="container d-flex align-items-center flex-column">
+                <img class="img-fluid" src="PlaneThymio_Photos/than_action.png" height="500" width="500"> 
+                <p class="text-secondary h5">בלוק הפעולה הוא שלב ההפעלה (אז) בפקודה שאנחנו נותנים לרובוט</p>
+                <p class="text-secondary h5 mb-5">לחצו על בלוק על מנת ללמוד עליו <i class="fa fa-mouse-pointer" aria-hidden="true"></i></p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Directions">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Directions.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Set_wheel_speeds">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Set_wheel_speeds.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Set_top_color">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Set_top_color.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Set_bottom_color">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Set_bottom_color.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Set_LED_state">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Set_LED_state.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#Play_melody">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/Play_melody.png" height="150" width="150">
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-5 d-flex flex-column align-items-center">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#start_timer">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-300 w-300">
+                            </div>
+                            <img class="img-fluid" src="PlaneThymio_Photos/start_timer.png" height="150" width="150">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="py-4 text-center text-white bg-secondary">
+            <div class="container"><small>Copyright &copy; Planetanya 2024 - www.Planetanya.org.il</small></div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Start_of_the_program" tabindex="-1" aria-labelledby="Start_of_the_program" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">פעולה עם תחילת התוכנית</h2>
+                                    <h4 class="h3 text-secondary mb-0">Start of the program</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל מיידית בתחילת התוכנית בלחיצה על כפתור <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                    </p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">בלחיצה על כפתור התחלת התוכנית הרובוט יפעיל תאורה עליונה בצבע אדום</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Single_button" tabindex="-1" aria-labelledby="Single_button" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">פעולה בלחיצה על כפתור בודד</h2>
+                                    <h4 class="h3 text-secondary mb-0">Single button</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל בלחיצה על כפתור מגע בודד שנמצא על חלקו העליון של הרובוט. יש להגדיר את הכפתור שעליו אנחנו נדרשים ללחוץ (הכפתור יודגש בכתום).</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">בלחיצה על כפתור קדימה הרובוט יתחיל בתזוזה קדימה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="On_the_side" tabindex="-1" aria-labelledby="On_the_side" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Accelerometer.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">התהפכות על הצד</h2>
+                                    <h4 class="h3 text-secondary mb-0">On the side</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט נמצא על צידו השמאלי או הימני, בין אם הוא מונח על הקרקע ובין אם הוא מוחזק באוויר.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט התהפך ונמצא על צידו הוא יעצור את הנסיעה שלו קדימה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="On_the_back" tabindex="-1" aria-labelledby="On_the_back" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Accelerometer.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">התהפכות על הגב</h2>
+                                    <h4 class="h3 text-secondary mb-0">On the back</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט נמצא על גבו (הפוך), בין אם הוא מונח על הקרקע ובין אם הוא מוחזק באוויר.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט התהפך ונמצא על גבו הוא יעצור את הנסיעה שלו קדימה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Roll_angle" tabindex="-1" aria-labelledby="Roll_angle" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Accelerometer.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי זווית במרחב</h2>
+                                    <h4 class="h3 text-secondary mb-0">Roll, Yaw and Pitch angle</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט נמצא בזווית מסוימת במרחב ביחס לכיוון הכבידה, כלומר ביחס לקרקע. את הזווית נבחר בעזרת שינוי הנקודה הירוקה:</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Roll_angle_Ex.png"><br>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט נמצא בעלייה הוא יאיץ את מהירות הגלגלים</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Impact_detection" tabindex="-1" aria-labelledby="Impact_detection" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Accelerometer.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי פגיעה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Impact detection</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט ירגיש שהוא פגע בעצם אחר בכל כיוון</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט יתקל בעצם מלפנים הוא יחל בנסיעה לאחור</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Falling_detection" tabindex="-1" aria-labelledby="Falling_detection" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Accelerometer.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי נפילה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Falling detection</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט ירגיש שהוא נמצא בנפילה (אינו מרגיש בכוח המשיכה)</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט נופל הוא יעצור את הנסיעה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Clap_detection" tabindex="-1" aria-labelledby="Clap_detection" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Microphone.png" style="width: 120px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי נפילה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Clap (sound) detection</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט ישמע מחיאת כף. זהירות: סביבה רועשת עלולה לגרום לרובוט להפעיל פעולה זו, יש לשמור על שקט.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר אני מוחא כף הרובוט יחל בתנועה לאחור</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Ground_detection" tabindex="-1" aria-labelledby="Ground_detection" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Proximity_sensor.png" style="width: 140px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי קרקע</h2>
+                                    <h4 class="h3 text-secondary mb-0">Ground detection</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט ירגיש שהוא לא נמצא על הקרקע. זהירות: קרקע שגורמת להשתקפות של תאורה או קרקע שחורה עלולה להפעיל פעולה זו.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר אני מרים את הרובוט באוויר הוא יעצור</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Ground_sensors" tabindex="-1" aria-labelledby="Ground_sensors" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Proximity_sensor.png" style="width: 140px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">מעקב אחרי קו</h2>
+                                    <h4 class="h3 text-secondary mb-0">Ground sensors</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה מאפשר לרובוט לעקוב אחר קו בצבע שחור ולנוע במרכזו. הרובוט יזהה את הקו השחור כשטח ללא קרקע ואילו חיישני הקרבה יזהו קרקע מימן ומשאל, פעולת זיהוי זו תגרום לרובוט לעקוב אחר הקו עד לסופו. זהירות: קרקע שגורמת להשתקפות של תאורה עלולה לפגוע במעקב אחר הקו.</p>
+                                    <p class="h5 text-secondary">בפעולות הבאות יש להפעיל את חיישן הקרבה הרלוונטי:</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Sensors_Ex.png" width="500"><br>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">הרובוט יעקוב בנסיעתו אחרי הקו שנסמן על הקרקע</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Proximity_sensors" tabindex="-1" aria-labelledby="Proximity_sensors" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <img class="img-fluid position-absolute top-0 start-0 ms-5" src="PlaneThymio_Photos/Proximity_sensor.png" style="width: 140px; height: auto;">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">זיהוי מכשולים מקדים ומאחור</h2>
+                                    <h4 class="h3 text-secondary mb-0">Proximity sensors</h4><br>
+                                    <p class="h5 text-secondary">אירוע זה יופעל כאשר הרובוט יזהה מכשול בחלקו הקידמי או האחורי.</p>
+                                    <p class="h5 text-secondary">ניתן להוסיף תנאי נוסף לשליטה במרחק שממנו יגיבו החיישנים:</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Sensors_front&back_Ex.png" width="500"><br>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט יבחין במכשול בחלקו הקדימי הוא ישנה את כיוון הנסיעה וינוע הצידה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Top_color_state" tabindex="-1" aria-labelledby="Top_color_state" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בדיקת תאורה עליונה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Top color state</h4><br>
+                                    <p class="h5 text-secondary"> תנאי זה בודק את צבע התאורה העליונה של הרובוט. זהו תנאי משני ולא תנאי ראשי! נוכל להוסיף תנאי זה בנוסף לתנאי קיים על מנת לחייב עמידה בשני תנאים במקביל.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט יזהה מכשול מקדים (תנאי ראשון) וגם צבע התאורה העליונה ירוק (תנאי שני) אז הוא יחל בנסיעה לאחור. כלומר על מנת שתבוצע פעולה יש לעמוד בשני התנאים יחד.</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Bottom_color_state" tabindex="-1" aria-labelledby="Bottom_color_state" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בדיקת תאורה תחתונה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Top color state</h4><br>
+                                    <p class="h5 text-secondary">תנאי זה בודק את צבע התאורה העליונה של הרובוט. זהו תנאי משני ולא תנאי ראשי! נוכל להוסיף תנאי זה בנוסף לתנאי קיים על מנת לחייב עמידה בשני תנאים במקביל.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט יזהה מכשול מקדים (תנאי ראשון) וגם צבע התאורה התחתונה אדום (תנאי שני) אז הוא יפנה ימינה. כלומר על מנת שתבוצע פעולה יש לעמוד בשני התנאים יחד.</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Led_state_check" tabindex="-1" aria-labelledby="Led_state_check" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">קוד נורות LED</h2>
+                                    <h4 class="h3 text-secondary mb-0">8-LED state check</h4><br>
+                                    <p class="h5 text-secondary">בחלקו העליון של הרובוט יש 8 נורות LED שיכולות להיות דלוקות (צהוב) או כבויות (אפור כהה). תנאי זה קורא את מצב הנורות, סה"כ 256 מצבים שונים של סדר ההדלקה של הנורות. תנאי זה מצטרף לתנאי קיים ולא יכול לבוא לבדו.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר הרובוט יזהה מכשול מלפנים (תנאי ראשון) וגם מצב הנורות הספציפי שנבחר ידלוק (תנאי שני) אז הרובוט יפנה ימינה.</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Timer_elapsed" tabindex="-1" aria-labelledby="Timer_elapsed" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-orange">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">הפעלת פעולה בגמר שעון עצר</h2>
+                                    <h4 class="h3 text-secondary mb-0">Timer elapsed</h4><br>
+                                    <p class="h5 text-secondary">תנאי זה מופעל בסיום ספירת שעון עצר שניתן להוסיף כבלוק פעולה (בלוק כחול) מתאים.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר תסתיים ספירה של 20 שניות הרובוט יחל בנסיעה מהירה יותר קדימה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Directions" tabindex="-1" aria-labelledby="Directions" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בחירת כיוון תנועה/עצירה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Directions</h4><br>
+                                    <p class="h5 text-secondary">בפעולה זו נבחר את כיוון התנועה של הרובוט ע"י סימון החץ המצביע על הכיוון הרלוונטי. בחירה של הריבוע במרכז תסמל עצירה. מהירות התנועה של הרובוט קבועה.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט יחל בתנועה קדימה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Set_wheel_speeds" tabindex="-1" aria-labelledby="Set_wheel_speeds" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בחירת מהירות תנועה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Set wheel speeds</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו תקבע את מהירות התנועה של גלגלי הרובוט. כאשר סמן שני הגלגלים מקביל בשני הצדדים, שני הגלגלים ינועו באותה מהירות. כאשר נשנה את מיקום הסמן נוכל לגרום לתנועה במהירות שונה של כל אחד מהגלגלים, לדוגמה לצורך סיבוב. כאשר מופיע ריבוע אדום במרכז הסמן - הגלגלים במצב עצירה.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט יעלה את מהירות הנסיעה שלו</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Set_top_color" tabindex="-1" aria-labelledby="Set_top_color" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בחירת צבע תאורה עליונה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Set top color</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו מאפשרת לכבות או להדליק את התאורה העליונה של הרובוט. ישנם 7 צבעים לבחירה ומצב אחד המסמן כיבוי של התאורה.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט ישנה את צבע התאורה העליונה לכחול</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Set_bottom_color" tabindex="-1" aria-labelledby="Set_bottom_color" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בחירת צבע תאורה תחתונה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Set bottom color</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו מאפשרת לכבות או להדליק את התאורה התחתונה של הרובוט. ישנם 7 צבעים לבחירה ומצב אחד המסמן כיבוי של התאורה.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט ישנה את צבע התאורה התחתונה לירוק</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Set_LED_state" tabindex="-1" aria-labelledby="Set_LED_state" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">בחירת מצב LED</h2>
+                                    <h4 class="h3 text-secondary mb-0">Set 8-LEDs state</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו מאפשרת לנו לבחור את מצב שמונת הנורות הנמצאות בראש הרובוט. כל נורה יכולה להיות דלוקה או כבויה, סה"כ 256 מצבים שונים שנוכל לבחור.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט ישנה את סדר הדלקת הנורות</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="Play_melody" tabindex="-1" aria-labelledby="Play_melody" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">ניגון מנגינה</h2>
+                                    <h4 class="h3 text-secondary mb-0">Play melody</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו מפעילה מנגינה שנגדיר מראש ותנוגן ע"י הרובוט. בסמל הפעולה ישנם שישה פסים כחולים, כל פס כחול מייצג צליל. לחיצה על הנקודה הממוקמת על הפס תגדיר ביצוע צליל קצר (שחור), ביצוע צליל כפול (לבן) או לא לבצע את הצליל כלל.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט ישמיע צליל שידווח לנו על כך</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="start_timer" tabindex="-1" aria-labelledby="start_timer" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content-blue">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="h1 text-secondary mb-0 text-decoration-underline">הפעלת שעון עצר</h2>
+                                    <h4 class="h3 text-secondary mb-0">Start timer</h4><br>
+                                    <p class="h5 text-secondary">פעולה זו תגדיר שעון עצר עד לזמן של 60 שניות. בסוף הזמן שהוגדר תופעל פעולה אחרת שהגדרנו ע"י בלוק התנאי (בלוק כתום) המתאים.</p>
+                                    <img class="img-fluid" src="PlaneThymio_Photos/Example.png"><br>
+                                    <p class="h5 text-secondary">כאשר התנאי שנבחר מתקיים הרובוט יחל בספירה של 10 שניות, בסופן יבצע פעולה חדשה</p><br>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>סגור חלון</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="PlaneThymio.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
